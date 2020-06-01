@@ -1,4 +1,5 @@
 # iannl.github.io
 My Website
 
-Here's the basic readme.
+This website was made about Scratch, and cratch was NOT made by me.
+Have fun!

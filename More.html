@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html id="full">
     <head>
+        <link rel="icon" href="Scratch Logo.png"/>
         <link rel="stylesheet" href="style.css"/>
         <title>Scratch: More</title>
     </head>
     <body>
         <h1>Scratch: More</h1>
-        <p>Things to click on!</p>
+        <h2>Things to click on!</h2>
         <span><a href="https://scratch.mit.edu/join" style="font-size: 12px;">JOIN NOW</a></span>
                     <span><a href="https://scratch.mit.edu/" style="font-size: 12px;">SCRATCH HOME</a></span>
                     <span><a href="https://scratch.mit.edu/create" style="font-size: 12px;">CREATE SOMETHING!</a></span>
@@ -14,7 +15,7 @@
                     <span><a href="info.html" style="font-size: 12px;">WEBPAGE INFO</a></span>
                     <span><a href="links.html" style="font-size: 12px;">MORE LINKS</a></span>
         
-                    <p>Stuff!</p>
+                    <h2>Stuff!</h2>
                     <h3>Example Code:</h3>->[On FLAG Clicked]<br/>[move (10) steps]<br/><br/>->[When [space] key pressed]<br/>[if <(-$-VAR)=(8)>]{<br/>__[Turn CCW by (90)]<br/>}<br/><br/>      <ul>
                  <ul>
                     <li><>: Boolean entry</li>
@@ -33,6 +34,9 @@
                  </ul>
                         
                         <p><span><a href="links.html" style="font-size: 12px;">PREVIOUS</a></span>
-                        <span><a href="fun.html" style="font-size: 12px;">NEXT</a></span></p>        
+                        <span><a href="fun.html" style="font-size: 12px;">NEXT</a></span></p>
+                        <script>
+                            document.body.style.backgroundColor = localStorage.getItem(bgcol);
+                        </script>
     </body>
 </html>

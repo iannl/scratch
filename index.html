@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html id="full">
     <head>
+        <link rel="icon" href="Scratch Logo.png"/>
         <link rel="stylesheet" href="style.css"/>
         <script>
             var actionbardata = {"icon:":"img src='Boathero.png'"}
@@ -8,18 +9,24 @@
         <title>Scratch</title>
     </head>
     <body>
-        <h1>Scratch</h1>
-        <!--Nothing-->
-        <a href="https://scratch.mit.edu" style="font-size: 12px;">Welcome to Scratch!</a> <!--This is a comment-->
-         <!--Nothing-->
+        <h1>Scratch <img class="headimg" src="Welcome.png" alt="Test" width="150"/></h1>
+        <a href="https://scratch.mit.edu" style="font-size: 12px;">Welcome to Scratch!</a>
+
         <p>Scratch is a free programing platform!</p> 
-        <p>You can do many things on Scratch, from just having fun looking at things to designing your own game. All programming on Scratch is in easy-to use drag-and-drop code, but the possibilities are endless!
-        </p>
+        <p>You can do many things on Scratch, from just having fun looking at things to designing your own game.
+            <p>All programming on Scratch is in easy-to use drag-and-drop code, but the possibilities are endless!</p>
+            <p>You can also make fun projects, and show them to your friends!</p>
+        
+
     </body>
     <footer>
         <p> 
-            <span><a href="More.html" style="font-size: 12px;">MORE INFORMATION ON WEBPAGE</a></span> <!--This is a comment--></p>
+            <span><a href="More.html" style="font-size: 12px;">MORE INFORMATION ON WEBPAGE</a></span>
+            <span><a href="settings.html" style="font-size: 12px;">SETTINGS</a></span>
 
             <span><a href="links.html" style="font-size: 12px;">NEXT</a></span>
     </footer>
+    <script>
+        document.body.style.backgroundColor = localStorage.getItem(bgcol);
+    </script>
 </html>

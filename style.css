@@ -24,7 +24,12 @@ html {
     font-size: 12px;
     font-weight: 100;
     font-family: monospace;
-    background-color: #00ff62;
+    background-color: #00f053;
+}
+
+body {
+    background-color: #00f053;
+    width: 800px;
 }
 
 h1 {
@@ -34,7 +39,12 @@ h1 {
 }
 
 h2 {
-    font-size: 15px;
+    font-size: 20px;
     text-decoration: bold;
     font-family: sans-serif;
+}
+
+.headimg {
+    float: inline-end;
+    margin-right: 480px;
 }

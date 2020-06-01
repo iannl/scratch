@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html id="full">
     <head>
+        <link rel="icon" href="Scratch Logo.png"/>
         <link rel="stylesheet" href="style.css"/>
-        <title>Scratch: Website information</title>
+        <title>Scratch: Troubleshooting</title>
     </head>
     <body>
-        <h1>Scratch: Website information and troubleshooting</h1>
-        <p>This website last updated a lot on: May 29 2020</p>
-        <p>If website not working, reload page. If it is still now working, open all documents and save them.</p>
+        <h1>Scratch: Troubleshooting <img class="headimg" src="Trouble.png" alt="Test" width="150"/></h1>
+       <h2>Help</h2>
+        <p>Do not worry if this website can not be found. It likely just means that it has been updated, so try reloading the page.
+        <p>If that does not work (and if you have a GitHub account) you can report a bug.</p>
         <span><a href="fun.html" style="font-size: 12px;">PREVIOUS</a></span>
         <span><a href="links.html" style="font-size: 12px;">NEXT</a></span>
     </body>
+    <script>
+        document.body.style.backgroundColor = localStorage.getItem(bgcol);
+    </script>
 </html>
