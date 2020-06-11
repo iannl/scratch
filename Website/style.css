@@ -1,0 +1,24 @@
+a {
+    border-style: solid;
+    border-color: grey;
+    border-radius: 4px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-width: 1px;
+    text-decoration: none;
+    color: #333333;
+    font-size: small;
+}
+
+button {
+    background-color: goldenrod;
+    border-radius: 2px;
+    border-width: 2px;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 300;
+    margin-left: 30px;
+    margin-right: 30px;
+}

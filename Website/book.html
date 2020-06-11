@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+    <script src="jquery.ui.touch-punch.min.js"></script>
+    <script>$('image').draggable();</script>
+    <script>
+      (function() {
+    $('image').on('swiperight', prevPage());
+    $('image').on('swipeleft', nextPage());
+})();
+    </script>
+  </head>
+<body>
+
+<p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()" > <!--<button type="button" onclick="alert('Tap page to go to next page.')">HELP</button>-->
+
+    
+<img id="image" src="page1.png" alt="page1"/>
+</p>
+<p><button id="buttonA" onclick="prevPage()">Previous Page</button>
+  <button id="buttonB" onclick="nextPage()">Next Page</button></p>
+<!--<a href="page1.html">Page One</a>-->
+<script>
+var pageNumber = 0
+let pages = ["page1.png","page2.png","page3.png","page4.png","page5.png","page6.png"]
+function nextPage() {
+  //alert("Going to next page...");
+  pageNumber += 1;
+  displayNewPage();
+};
+function prevPage() {
+  //alert("Going to previous page...");
+  pageNumber -= 1;
+  displayNewPage();
+};
+function displayNewPage() {
+  if (pageNumber >= pages.length) {
+    pageNumber = pages.length-1;
+  };
+  if (pageNumber < 0) {
+    pageNumber = 0;
+  };
+  document.getElementById("image").src = pages[pageNumber];
+  document.getElementById("image").alt = pages[pageNumber]-".png";
+};
+function mouseDown() {
+  //document.getElementById("myP").style.color = "red";
+  //document.getElementById("image").src = "page2.png";
+  //document.getElementById("image").alt = "page2";
+}
+
+function mouseUp() {
+  //document.getElementById("myP").style.color = "black";
+}
+window.onload = function() {
+  updateImageSize()
+}
+function updateImageSize() {
+  //alert(`Image Size Updating ${document.getElementById("size").value}`);
+  let SIZE = document.getElementById("size").value
+  document.getElementById("image").width = SIZE;
+  document.getElementById("buttonA").style.padding = `${SIZE/51.5}px`;
+  document.getElementById("buttonA").style.fontSize = `${(SIZE/515)*30}px`;
+  document.getElementById("buttonA").style.marginLeft = `${(SIZE/515)*30}px`;
+  document.getElementById("buttonA").style.marginRight = `${(SIZE/515)*30}px`;
+  document.getElementById("buttonB").style.padding = `${SIZE/51.5}px`;
+  document.getElementById("buttonB").style.fontSize = `${(SIZE/515)*30}px`;
+  document.getElementById("buttonB").style.marginLeft = `${(SIZE/515)*30}px`;
+  document.getElementById("buttonB").style.marginRight = `${(SIZE/515)*30}px`;
+}
+</script>
+
+
+</body>
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="slidecontainer">
+  <p>SIZE</p>
+  <input type="range" min="100" max="2500" value="515" id="size" onchange="updateImageSize()"/>
+</div>
+
+</body>
+</html>

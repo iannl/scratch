@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<button onclick="myFunction()">enter</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  var person = prompt("Please enter your name:", "My Name");
+  if (person == null || person == "") {
+    txt = "Hello  ! That is a interesting name...";
+  } else {
+    txt = "Hello " + person + "! How are you today "+ person +"?";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>

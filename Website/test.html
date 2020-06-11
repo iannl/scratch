@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+    
+<script>
+    var pageNumber = 0
+    let pages = ["page1.png","page2.png","page3.png","page4.png","page5.png"]
+    function nextPage() {
+      pageNumber ++;
+      displayNewPage();
+    }
+    function prevPage() {
+      pageNumber --;
+      displayNewPage();
+    }
+    function displayNewPage() {
+      if (pageNumber >= pages.length) {
+        pageNumber = pages.length-1;
+      }
+      if (pageNumber < 0) {
+        pageNumber = 0;
+      }
+      document.getElementById("image").src = pages[pageNumber];
+      document.getElementById("image").alt = pages[pageNumber]-".png";
+    }
+
+    </script>
+    </body>
+</html>
